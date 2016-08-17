@@ -10,10 +10,13 @@ filteredQuery = ->
 
 history.pushState = ->
   retval = oldPushState.apply(this, arguments)
-  ShopifyApp.pushState window.location.pathname + filteredQuery()
+  ShopifyApp.replaceState window.location.pathname + filteredQuery()
   retval
 
 history.replaceState = ->
   retval = oldReplaceState.apply(this, arguments)
   ShopifyApp.replaceState window.location.pathname + filteredQuery()
   retval
+
+window.addEventListener 'popstate', ->
+  ShopifyApp.replaceState window.location.pathname + filteredQuery()
