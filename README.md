@@ -1,8 +1,6 @@
 # ShopifyApp::HistoryMonkeypatch
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/shopify_app/history_monkeypatch`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem adds a javascript (well, coffeescript) file to your rails asset pipeline that improves the user experience when using turbolinks or another client-side router within a Shopify Embedded App. The javascript code decorates the history.pushState and history.replaceState functions so that they use the provided ShopifyApp.pushState and ShopifyApp.replaceState functions to update the browser's address bar in addition to updating the iframe's window.location.
 
 ## Installation
 
