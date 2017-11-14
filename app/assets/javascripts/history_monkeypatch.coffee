@@ -1,7 +1,7 @@
 oldPushState = history.pushState
 oldReplaceState = history.replaceState
 
-FILTER_REGEX = /(^|&)(timestamp|protocol|hmac|shop)=[^&]*/g
+FILTER_REGEX = /(^|&)(timestamp|protocol|hmac|shop|locale)=[^&]*/g
 
 filteredQuery = ->
   if window.location.search.length > 0
